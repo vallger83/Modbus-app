@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modbus Converter</title>
+</head>
+<body>
+    <a href="/psi">MilliAmp To PSI Converter</a>
+    <h1>Modbus Converter</h1>
+    <form method="POST">
+        <input type="number" name="First Integer" step="any" required>
+        <input type="number" name="Second Integer" step="any" required>
+        <button type="submit">Submit</button>
+    </form>
+     {% if result1 is not none %}
+        <h2>Result: {{ result1 }}</h2>
+    {% endif %}
+</body>
+</html>
