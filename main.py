@@ -20,7 +20,7 @@ def psi():
         milliamp_value = float(request.form['Milliamp Value'])
         max_psi_value = float(request.form['Max psi value'])
         min_psi_value = float(request.form['Min psi value'])
-        result2 = (milliamp_value - 4) * (max_psi_value - min_psi_value) / (20 - 4) + min_psi_value
+        result2 = (((milliamp_value - 4) / (20 - 4)) * (max_psi_value - min_psi_value)) + min_psi_value
         return render_template('psi.html', result2=result2)
     return render_template('psi.html', result2=None)
 
