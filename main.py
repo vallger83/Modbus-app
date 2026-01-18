@@ -8,7 +8,8 @@ def index():
     if request.method == 'POST':
         a = int(request.form['First Integer'])
         b = int(request.form['Second Integer'])
-        result1 = struct.unpack('>f', bytes.fromhex(f'{a:0>4x}'+ f'{b:0>4x}'))[0]
+        result = struct.unpack('>f', bytes.fromhex(f'{a:0>4x}'+ f'{b:0>4x}'))[0]
+        result1 = f"{result:.2f}"
         return render_template('index.html', result1=result1)
     return render_template('index.html', result1=None,)
 
@@ -19,7 +20,8 @@ def psi():
         milliamp_value = float(request.form['Milliamp Value'])
         max_psi_value = float(request.form['Max psi value'])
         min_psi_value = float(request.form['Min psi value'])
-        result2 = (((milliamp_value - 4) / (20 - 4)) * (max_psi_value - min_psi_value)) + min_psi_value
+        result = (((milliamp_value - 4) / (20 - 4)) * (max_psi_value - min_psi_value)) + min_psi_value
+        result2 = f"{result:.2f} psi"
         return render_template('psi.html', result2=result2)
     return render_template('psi.html', result2=None)
 
