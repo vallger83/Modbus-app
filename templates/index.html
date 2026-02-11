@@ -8,10 +8,16 @@
 </head>
 <body>
     <a href="/psi" class="button-71">MilliAmp To PSI Converter</a>
-    <h1>Modbus Converter</h1>
+    <h2>Modbus Converter</h2>
     <form method="POST">
-        <input type="number" name="First Integer" step="any" required>
-        <input type="number" name="Second Integer" step="any" required>
+        <label for="First">First Integer:</label>
+        <div>
+            <input type="number" id="First" name="First Integer" step="any" required>
+        </div>        
+        <label for="Second">Second Integer:</label>
+        <div>
+            <input type="number" id="Second" name="Second Integer" step="any" required>
+        </div>
         <button type="submit">Submit</button>
     </form>
      {% if result1 is not none %}

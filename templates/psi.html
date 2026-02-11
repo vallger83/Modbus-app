@@ -8,14 +8,20 @@
 </head>
 <body>
     <a href="/" class="button-71">Modbus Converter</a>
-    <h1>MilliAmp To PSI Converter</h1>
+    <h2>MilliAmp To PSI Converter</h2>
      <form method="POST">
         <label for="Milliamp">MilliAmp Value:</label>
-        <input type="number" id="Milliamp" name="Milliamp Value" step="any" required>
+        <div>
+            <input type="number" id="Milliamp" name="Milliamp Value" step="any" required>
+        </div>
         <label for="Max">Max PSI Value:</label>
-        <input type="number" id="Max" name="Max psi value" step="any" required>
+        <div>
+            <input type="number" id="Max" name="Max psi value" step="any" required>
+        </div>
         <label for="Min">Min PSI Value:</label>
-        <input type="number" id="Min" name="Min psi value" step="any" required>
+        <div>
+            <input type="number" id="Min" name="Min psi value" step="any" required>
+        </div>
         <button type="submit">Submit</button>
     </form>
      {% if result2 is not none %}
